@@ -6,17 +6,20 @@ using ll = long long;
 using namespace std;
 
 int main() {
+    clock_t start, end;
 
     ll n;
     cin >> n;
+    start = clock();
     ld a = (1 + sqrt(5))/2;
     ld b = (1 - sqrt(5))/2;
     ld x = 1.0, y = 1.0;
     for(ll i = 0; i < n; i++) {
         x *= a, y *= b;
-        cout << (x - y) / sqrt(5) << " ";
+        ld s = (x - y) / sqrt(5);
     }
-
+    end = clock();
+    cout << "Process took " << (1000.0 * ld(end - start) / ld(CLOCKS_PER_SEC)) << " milliseconds." << '\n';
     return 0;
 
 }
