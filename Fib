@@ -1,0 +1,22 @@
+#include <bits/stdc++.h>
+#define PI acos(-1.0)
+#define endl '\n'
+using ld = long double;
+using ll = long long;
+using namespace std;
+
+int main() {
+
+    ll n;
+    cin >> n;
+    ld a = (1 + sqrt(5))/2;
+    ld b = (1 - sqrt(5))/2;
+    ld x = 1.0, y = 1.0;
+    for(ll i = 0; i < n; i++) {
+        x *= a, y *= b;
+        cout << (x - y) / sqrt(5) << " ";
+    }
+
+    return 0;
+
+}
